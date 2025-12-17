@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://belajar-bareng.onrender.com/api/users",
+					"raw": "https://belajar-bareng.onrender.com/api/login",
 					"protocol": "https",
 					"host": [
 						"belajar-bareng",
