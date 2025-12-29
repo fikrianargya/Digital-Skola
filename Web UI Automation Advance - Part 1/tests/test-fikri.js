@@ -35,10 +35,11 @@ describe('Google Search Test', function () {
         await buttonLogin.click();
     })
 
-    it('Klik Login', async function () {
+    it('Filter Nama Z to A', async function () {
         await driver.wait(until.urlContains('inventory.html'), 5000);
         const dropdown = await driver.wait(until.elementLocated(By.css('[data-test="product-sort-container"]')), 5000);
         const select = new Select(dropdown);
         await select.selectByValue('za');
     })
+
 });
