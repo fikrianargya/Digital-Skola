@@ -20,27 +20,19 @@ describe('Google Search Test', function () {
         const title = await driver.getTitle();
     })
 
-    it('Cek Input Username', async function () {
+    it('Login dengan input Username dan Password', async function () {
         let inputUsername = await driver.findElement(By.css('[data-test="username"]'));
-        await inputUsername.sendKeys('standard_user');
-    })
-
-    it('Cek Input Password', async function () {
         let inputPassword = await driver.findElement(By.xpath('//*[@data-test="password"]'));
-        await inputPassword.sendKeys('secret_sauce');
-    })
-
-    it('Cek Klik Login', async function () {
         let buttonLogin = await driver.findElement(By.className('submit-button btn_action'));
+        await inputUsername.sendKeys('standard_user');
+        await inputPassword.sendKeys('secret_sauce');
         await buttonLogin.click();
     })
 
-    it('Filter Nama Z to A', async function () {
+    it('Cek Filter Nama Z to A', async function () {
         await driver.wait(until.urlContains('inventory.html'), 5000);
         const dropdown = await driver.wait(until.elementLocated(By.css('[data-test="product-sort-container"]')), 5000);
         const select = new Select(dropdown);
         await select.selectByValue('za');
     })
-
 });
-
