@@ -20,17 +20,17 @@ describe('Google Search Test', function () {
         const title = await driver.getTitle();
     })
 
-    it('Input Username', async function () {
+    it('Cek Input Username', async function () {
         let inputUsername = await driver.findElement(By.css('[data-test="username"]'));
         await inputUsername.sendKeys('standard_user');
     })
 
-    it('Input Password', async function () {
+    it('Cek Input Password', async function () {
         let inputPassword = await driver.findElement(By.xpath('//*[@data-test="password"]'));
         await inputPassword.sendKeys('secret_sauce');
     })
 
-    it('Klik Login', async function () {
+    it('Cek Klik Login', async function () {
         let buttonLogin = await driver.findElement(By.className('submit-button btn_action'));
         await buttonLogin.click();
     })
@@ -43,3 +43,4 @@ describe('Google Search Test', function () {
     })
 
 });
+
